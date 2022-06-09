@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-# import plotly.graph_objects as go
-
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
@@ -11,7 +9,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 
 #--------------------------------------------------------------------------------------------------------------#
 
-st.title('Machine Learning: Simple Linear Regression')
+st.title('Machine Learning: Linear Regression')
 
 st.sidebar.title('Start here:')
 data_option = st.sidebar.radio(label = 'Select Dataset Type',
@@ -91,15 +89,6 @@ try:
     corr_heatmap, ax = plt.subplots()
     ax = sns.heatmap(data_full.corr('pearson'), cmap = 'PuOr', fmt = '.2f', annot = True, vmin = -1, vmax = 1, center = 0)
     st.pyplot(corr_heatmap)
-
-    # corr_heatmap = go.Figure()
-    # corr_heatmap.add_trace(go.Heatmap(z = data_full.corr(),
-    #                                   x = list(data_full.columns),
-    #                                   y = list(data_full.columns),
-    #                                   zmax = 1, zmid = 0, zmin = -1,
-    #                                   colorscale = 'PuOr'))
-    # corr_heatmap.update_xaxes(side = 'top')
-    # st.plotly_chart(corr_heatmap)
 
 
     #--------------------------------------------------------------------------------------------------------------#
