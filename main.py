@@ -3,7 +3,7 @@ import streamlit as st
 st.title('Welcome!')
 
 st.markdown('''
-            This is a machine learning demo with **Simple Linear Regression** and **Classification**.
+            This is a machine learning demo with **Linear Regression** and **Classification**.
             <br><br>
             Developed by Tan Yan Bin
             <br>
